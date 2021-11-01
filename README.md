@@ -5,4 +5,4 @@ New technology always fascinates me beyond imagination, every chance I come accr
 Between hardware and software, I chose software for one reason, the ability to touch and change lives accross the globe, this is a calling I am more than willing to answer at any given time,any given place.
 This is why I became a full stack developer, specializing in Java, sql, C#, vba and node js. I can create desktop, mobile as well as web applications, supporting both the frontend and backend, as well as middle auth-ware, as and when is required.
 In case you wanna talk...my email is otiato.paul@gmail.com. Feel free to get in touch and maybe we can talk some more.
-Thanks & have a good day!
+Thanks & Have a good day / bonjour / guten tag / siku njema!
