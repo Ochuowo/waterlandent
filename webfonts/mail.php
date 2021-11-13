@@ -3,11 +3,11 @@
 $name = $_POST['name'];
 $email= $_POST['email'];
 $message= $_POST['message'];
-$to = "waterlandent@mail.com";
+$to = "waterlandent@gmail.com";
 $subject = "Mail From website";
 $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: noreply@yoursite.com" . "\r\n" .
-"CC: somebodyelse@example.com";
+$headers = "From: noreply@ochuowo.github.io.waterlandent.com" . "\r\n" .
+"CC: otiato.paul@gmail.com";
 if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }
