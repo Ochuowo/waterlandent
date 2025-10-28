@@ -1,241 +1,771 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Waterland Enterprise</title>
-		<meta name="robots" content="noindex" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="css/main.css" type="text/css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ochuowo Otiato | Fullstack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/avatar.png" alt="Ochuowo Otiato">
+                </div>
+                <div class="logo-text">
+                    <h1>Ochuowo Otiato</h1>
+                    <p>Fullstack Developer</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-		<!-- Header -->
-			<div id="header">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Creating Digital Experiences That Matter</h1>
+                <p>I'm a full-stack developer specializing in building exceptional digital experiences. With expertise in both frontend and backend technologies, I bring ideas to life through clean, efficient code.</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="top">
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Portfolio</h2>
+                <p>A showcase of my recent projects and solutions</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="images/mobapp.png" alt="Mobile Applications">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Mobile Applications</h3>
+                        <p>Internet of Things or IOT is the new norm. Mobile apps will not only reside in our phones, but are fastly being adapted into machine learning and A.I. production fields.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="images/ochisproperty.png" alt="Ochi's Property Manager">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Ochi's Property Manager</h3>
+                        <p>A robust property management solution offering various benefits in asset management as well as tenant management.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Desktop App</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="images/webdesign.jpg" alt="Web Design">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Web Design & Development</h3>
+                        <p>Get a quick set up with web-hosting, web-design and web integration services. From simple ideas to complicated concepts.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar58"><img src="images/avatar.png" alt="" /></span>
-							<h1 id="title">Ochuowo Otiato</h1>
-							<p>Fullstack Developer</p>
-							<br></br>
-						</div>
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know the person behind the code</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="images/developer.jpg" alt="Ochuowo Otiato">
+                </div>
+                <div class="about-text">
+                    <p>Ever since the first day I discovered computers, I just wanted to get to know more about them and what they can do. New technology always fascinates me beyond imagination.</p>
+                    <p>Between hardware and software, I chose software for one reason: the ability to touch and change lives across the globe. This is a calling I am more than willing to answer at any given time, any given place.</p>
+                    <p>I create desktop, mobile and web applications, supporting both the frontend and backend, as well as middleware for authentication, as and when is required.</p>
+                    <div class="skills">
+                        <span class="skill">Java</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">C#</span>
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+    <!-- Blog Section -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning Resources</h2>
+                <p>Explore my collection of tutorials and learning materials</p>
+            </div>
+            <div class="blog-tabs">
+                <div class="blog-tab active" data-category="all">All Topics</div>
+                <div class="blog-tab" data-category="javascript">JavaScript</div>
+                <div class="blog-tab" data-category="html">HTML</div>
+                <div class="blog-tab" data-category="css">CSS</div>
+            </div>
+            
+            <!-- Blog Articles -->
+            <div id="blog-articles">
+                <!-- JavaScript Article -->
+                <div class="blog-article" id="js-article">
+                    <a href="#" class="back-to-blog" id="back-from-js"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+                    <div class="article-header">
+                        <h2>JavaScript Fundamentals: A Beginner's Guide</h2>
+                        <div class="blog-meta">
+                            <span><i class="far fa-clock"></i> 15 min read</span>
+                            <span><i class="far fa-calendar"></i> June 12, 2023</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <p>JavaScript is the programming language of the web. It allows you to create dynamic and interactive web pages. In this guide, we'll cover the fundamental concepts you need to get started with JavaScript.</p>
+                        
+                        <h3>Variables and Data Types</h3>
+                        <p>Variables are containers for storing data values. JavaScript has three ways to declare variables: <code>var</code>, <code>let</code>, and <code>const</code>.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-comment">// Variable declarations</span><br>
+                            <span class="code-keyword">var</span> name = <span class="code-string">"John"</span>; <span class="code-comment">// Function-scoped</span><br>
+                            <span class="code-keyword">let</span> age = <span class="code-number">25</span>; <span class="code-comment">// Block-scoped, can be reassigned</span><br>
+                            <span class="code-keyword">const</span> PI = <span class="code-number">3.14</span>; <span class="code-comment">// Block-scoped, cannot be reassigned</span><br><br>
+                            
+                            <span class="code-comment">// Data types</span><br>
+                            <span class="code-keyword">let</span> isStudent = <span class="code-keyword">true</span>; <span class="code-comment">// Boolean</span><br>
+                            <span class="code-keyword">let</span> score = <span class="code-number">95.5</span>; <span class="code-comment">// Number</span><br>
+                            <span class="code-keyword">let</span> greeting = <span class="code-string">"Hello World"</span>; <span class="code-comment">// String</span><br>
+                            <span class="code-keyword">let</span> colors = [<span class="code-string">"red"</span>, <span class="code-string">"green"</span>, <span class="code-string">"blue"</span>]; <span class="code-comment">// Array</span><br>
+                            <span class="code-keyword">let</span> person = {<span class="code-string">"name"</span>: <span class="code-string">"Alice"</span>, <span class="code-string">"age"</span>: <span class="code-number">30</span>}; <span class="code-comment">// Object</span>
+                        </div>
+                        
+                        <h3>Functions</h3>
+                        <p>Functions are reusable blocks of code that perform a specific task. They help organize code and avoid repetition.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-comment">// Function declaration</span><br>
+                            <span class="code-keyword">function</span> <span class="code-function">greet</span>(name) {<br>
+                            &nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-string">"Hello, "</span> + name + <span class="code-string">"!"</span>;<br>
+                            }<br><br>
+                            
+                            <span class="code-comment">// Function expression</span><br>
+                            <span class="code-keyword">const</span> multiply = <span class="code-keyword">function</span>(a, b) {<br>
+                            &nbsp;&nbsp;<span class="code-keyword">return</span> a * b;<br>
+                            };<br><br>
+                            
+                            <span class="code-comment">// Arrow function (ES6)</span><br>
+                            <span class="code-keyword">const</span> divide = (a, b) => a / b;<br><br>
+                            
+                            <span class="code-comment">// Using functions</span><br>
+                            <span class="code-keyword">let</span> message = <span class="code-function">greet</span>(<span class="code-string">"Sarah"</span>);<br>
+                            console.<span class="code-function">log</span>(message); <span class="code-comment">// Output: "Hello, Sarah!"</span><br>
+                            console.<span class="code-function">log</span>(<span class="code-function">multiply</span>(<span class="code-number">5</span>, <span class="code-number">3</span>)); <span class="code-comment">// Output: 15</span>
+                        </div>
+                        
+                        <h3>Control Structures</h3>
+                        <p>Control structures allow you to control the flow of your program's execution based on conditions.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-comment">// If-else statement</span><br>
+                            <span class="code-keyword">let</span> temperature = <span class="code-number">22</span>;<br>
+                            <span class="code-keyword">if</span> (temperature > <span class="code-number">30</span>) {<br>
+                            &nbsp;&nbsp;console.<span class="code-function">log</span>(<span class="code-string">"It's hot outside"</span>);<br>
+                            } <span class="code-keyword">else if</span> (temperature > <span class="code-number">20</span>) {<br>
+                            &nbsp;&nbsp;console.<span class="code-function">log</span>(<span class="code-string">"It's warm outside"</span>);<br>
+                            } <span class="code-keyword">else</span> {<br>
+                            &nbsp;&nbsp;console.<span class="code-function">log</span>(<span class="code-string">"It's cool outside"</span>);<br>
+                            }<br><br>
+                            
+                            <span class="code-comment">// For loop</span><br>
+                            <span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">0</span>; i < <span class="code-number">5</span>; i++) {<br>
+                            &nbsp;&nbsp;console.<span class="code-function">log</span>(<span class="code-string">"Count: "</span> + i);<br>
+                            }<br><br>
+                            
+                            <span class="code-comment">// While loop</span><br>
+                            <span class="code-keyword">let</span> count = <span class="code-number">0</span>;<br>
+                            <span class="code-keyword">while</span> (count < <span class="code-number">3</span>) {<br>
+                            &nbsp;&nbsp;console.<span class="code-function">log</span>(<span class="code-string">"Count: "</span> + count);<br>
+                            &nbsp;&nbsp;count++;<br>
+                            }
+                        </div>
+                        
+                        <div class="exercise">
+                            <h4>Exercise: Create a Simple Calculator</h4>
+                            <p>Write a JavaScript function called <code>calculator</code> that takes three parameters: two numbers and an operator (+, -, *, /). The function should return the result of the operation.</p>
+                            <p>Example: <code>calculator(10, 5, '+')</code> should return <code>15</code>.</p>
+                            <div class="code-block">
+                                <span class="code-comment">// Your solution here</span><br>
+                                <span class="code-keyword">function</span> <span class="code-function">calculator</span>(num1, num2, operator) {<br>
+                                &nbsp;&nbsp;<span class="code-comment">// Write your code here</span><br>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- HTML Article -->
+                <div class="blog-article" id="html-article">
+                    <a href="#" class="back-to-blog" id="back-from-html"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+                    <div class="article-header">
+                        <h2>HTML5 Semantic Elements: Building Better Structure</h2>
+                        <div class="blog-meta">
+                            <span><i class="far fa-clock"></i> 10 min read</span>
+                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <p>HTML5 introduced semantic elements that give meaning to the structure of web pages. These elements make your HTML more readable and improve accessibility for screen readers and search engines.</p>
+                        
+                        <h3>Basic HTML Structure</h3>
+                        <p>Every HTML document should have a basic structure with essential elements.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-html-tag">&lt;!DOCTYPE html&gt;</span><br>
+                            <span class="code-html-tag">&lt;html</span> <span class="code-keyword">lang</span>=<span class="code-string">"en"</span><span class="code-html-tag">&gt;</span><br>
+                            <span class="code-html-tag">&lt;head&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;meta</span> <span class="code-keyword">charset</span>=<span class="code-string">"UTF-8"</span><span class="code-html-tag">&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;meta</span> <span class="code-keyword">name</span>=<span class="code-string">"viewport"</span> <span class="code-keyword">content</span>=<span class="code-string">"width=device-width, initial-scale=1.0"</span><span class="code-html-tag">&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;title&gt;</span>Document<span class="code-html-tag">&lt;/title&gt;</span><br>
+                            <span class="code-html-tag">&lt;/head&gt;</span><br>
+                            <span class="code-html-tag">&lt;body&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-comment">&lt;!-- Page content goes here --&gt;</span><br>
+                            <span class="code-html-tag">&lt;/body&gt;</span><br>
+                            <span class="code-html-tag">&lt;/html&gt;</span>
+                        </div>
+                        
+                        <h3>Semantic Elements</h3>
+                        <p>Semantic elements clearly describe their meaning to both the browser and the developer.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-html-tag">&lt;header&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;h1&gt;</span>Website Title<span class="code-html-tag">&lt;/h1&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;nav&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;ul&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;li&gt;&lt;a</span> <span class="code-keyword">href</span>=<span class="code-string">"#"</span><span class="code-html-tag">&gt;</span>Home<span class="code-html-tag">&lt;/a&gt;&lt;/li&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;li&gt;&lt;a</span> <span class="code-keyword">href</span>=<span class="code-string">"#"</span><span class="code-html-tag">&gt;</span>About<span class="code-html-tag">&lt;/a&gt;&lt;/li&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;/ul&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;/nav&gt;</span><br>
+                            <span class="code-html-tag">&lt;/header&gt;</span><br><br>
+                            
+                            <span class="code-html-tag">&lt;main&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;article&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;h2&gt;</span>Article Title<span class="code-html-tag">&lt;/h2&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;p&gt;</span>Article content...<span class="code-html-tag">&lt;/p&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;/article&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;aside&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;h3&gt;</span>Related Links<span class="code-html-tag">&lt;/h3&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;ul&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;li&gt;&lt;a</span> <span class="code-keyword">href</span>=<span class="code-string">"#"</span><span class="code-html-tag">&gt;</span>Link 1<span class="code-html-tag">&lt;/a&gt;&lt;/li&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;/ul&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;/aside&gt;</span><br>
+                            <span class="code-html-tag">&lt;/main&gt;</span><br><br>
+                            
+                            <span class="code-html-tag">&lt;footer&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;p&gt;</span>&copy; 2023 My Website<span class="code-html-tag">&lt;/p&gt;</span><br>
+                            <span class="code-html-tag">&lt;/footer&gt;</span>
+                        </div>
+                        
+                        <h3>Forms and Input Elements</h3>
+                        <p>HTML forms allow users to enter data that is sent to a server for processing.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-html-tag">&lt;form</span> <span class="code-keyword">action</span>=<span class="code-string">"/submit"</span> <span class="code-keyword">method</span>=<span class="code-string">"post"</span><span class="code-html-tag">&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;div&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;label</span> <span class="code-keyword">for</span>=<span class="code-string">"name"</span><span class="code-html-tag">&gt;</span>Name:<span class="code-html-tag">&lt;/label&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;input</span> <span class="code-keyword">type</span>=<span class="code-string">"text"</span> <span class="code-keyword">id</span>=<span class="code-string">"name"</span> <span class="code-keyword">name</span>=<span class="code-string">"name"</span> <span class="code-keyword">required</span><span class="code-html-tag">&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;/div&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;div&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;label</span> <span class="code-keyword">for</span>=<span class="code-string">"email"</span><span class="code-html-tag">&gt;</span>Email:<span class="code-html-tag">&lt;/label&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;input</span> <span class="code-keyword">type</span>=<span class="code-string">"email"</span> <span class="code-keyword">id</span>=<span class="code-string">"email"</span> <span class="code-keyword">name</span>=<span class="code-string">"email"</span> <span class="code-keyword">required</span><span class="code-html-tag">&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;/div&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;div&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;label</span> <span class="code-keyword">for</span>=<span class="code-string">"message"</span><span class="code-html-tag">&gt;</span>Message:<span class="code-html-tag">&lt;/label&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html-tag">&lt;textarea</span> <span class="code-keyword">id</span>=<span class="code-string">"message"</span> <span class="code-keyword">name</span>=<span class="code-string">"message"</span> <span class="code-keyword">rows</span>=<span class="code-string">"4"</span><span class="code-html-tag">&gt;&lt;/textarea&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;/div&gt;</span><br>
+                            &nbsp;&nbsp;<span class="code-html-tag">&lt;button</span> <span class="code-keyword">type</span>=<span class="code-string">"submit"</span><span class="code-html-tag">&gt;</span>Send Message<span class="code-html-tag">&lt;/button&gt;</span><br>
+                            <span class="code-html-tag">&lt;/form&gt;</span>
+                        </div>
+                        
+                        <div class="exercise">
+                            <h4>Exercise: Create a Personal Profile Page</h4>
+                            <p>Create an HTML page that includes:</p>
+                            <ul>
+                                <li>A header with your name and a navigation menu</li>
+                                <li>A main section with an article about yourself</li>
+                                <li>An aside with your skills or interests</li>
+                                <li>A footer with copyright information</li>
+                                <li>A contact form with name, email, and message fields</li>
+                            </ul>
+                            <p>Use semantic HTML5 elements throughout your page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CSS Article -->
+                <div class="blog-article" id="css-article">
+                    <a href="#" class="back-to-blog" id="back-from-css"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+                    <div class="article-header">
+                        <h2>Modern CSS Layouts with Flexbox and Grid</h2>
+                        <div class="blog-meta">
+                            <span><i class="far fa-clock"></i> 20 min read</span>
+                            <span><i class="far fa-calendar"></i> May 15, 2023</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <p>CSS Flexbox and Grid are powerful layout systems that make it easier to create complex, responsive web designs. In this article, we'll explore both and learn when to use each.</p>
+                        
+                        <h3>CSS Flexbox</h3>
+                        <p>Flexbox is designed for one-dimensional layouts - either a row or a column. It's perfect for components like navigation bars, card layouts, and centering elements.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-comment">/* Flexbox container */</span><br>
+                            .container {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">display</span>: <span class="code-css-value">flex</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">justify-content</span>: <span class="code-css-value">space-between</span>; <span class="code-comment">/* Horizontal alignment */</span><br>
+                            &nbsp;&nbsp;<span class="code-css-property">align-items</span>: <span class="code-css-value">center</span>; <span class="code-comment">/* Vertical alignment */</span><br>
+                            &nbsp;&nbsp;<span class="code-css-property">flex-wrap</span>: <span class="code-css-value">wrap</span>; <span class="code-comment">/* Allow items to wrap */</span><br>
+                            &nbsp;&nbsp;<span class="code-css-property">gap</span>: <span class="code-css-value">1rem</span>; <span class="code-comment">/* Space between items */</span><br>
+                            }<br><br>
+                            
+                            <span class="code-comment">/* Flexbox items */</span><br>
+                            .item {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">flex</span>: <span class="code-css-value">1 1 200px</span>; <span class="code-comment">/* grow, shrink, basis */</span><br>
+                            &nbsp;&nbsp;<span class="code-css-property">min-height</span>: <span class="code-css-value">100px</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">background</span>: <span class="code-css-value">#f0f0f0</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">padding</span>: <span class="code-css-value">1rem</span>;<br>
+                            }
+                        </div>
+                        
+                        <h3>CSS Grid</h3>
+                        <p>CSS Grid is designed for two-dimensional layouts - both rows and columns. It's ideal for overall page layouts and complex component designs.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-comment">/* Grid container */</span><br>
+                            .grid-container {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">display</span>: <span class="code-css-value">grid</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">grid-template-columns</span>: <span class="code-css-value">repeat(auto-fit, minmax(250px, 1fr))</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">grid-template-rows</span>: <span class="code-css-value">auto</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">gap</span>: <span class="code-css-value">1.5rem</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">padding</span>: <span class="code-css-value">1rem</span>;<br>
+                            }<br><br>
+                            
+                            <span class="code-comment">/* Grid items with placement */</span><br>
+                            .header {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">grid-column</span>: <span class="code-css-value">1 / -1</span>; <span class="code-comment">/* Span all columns */</span><br>
+                            &nbsp;&nbsp;<span class="code-css-property">background</span>: <span class="code-css-value">#333</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">color</span>: <span class="code-css-value">white</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">padding</span>: <span class="code-css-value">1rem</span>;<br>
+                            }<br><br>
+                            
+                            .sidebar {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">grid-column</span>: <span class="code-css-value">1 / 2</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">background</span>: <span class="code-css-value">#f5f5f5</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">padding</span>: <span class="code-css-value">1rem</span>;<br>
+                            }<br><br>
+                            
+                            .main-content {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">grid-column</span>: <span class="code-css-value">2 / -1</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">background</span>: <span class="code-css-value">white</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">padding</span>: <span class="code-css-value">1rem</span>;<br>
+                            }
+                        </div>
+                        
+                        <h3>Responsive Design with Media Queries</h3>
+                        <p>Media queries allow you to apply different styles based on device characteristics, most commonly the viewport width.</p>
+                        
+                        <div class="code-block">
+                            <span class="code-comment">/* Base styles for all devices */</span><br>
+                            .container {<br>
+                            &nbsp;&nbsp;<span class="code-css-property">padding</span>: <span class="code-css-value">1rem</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">max-width</span>: <span class="code-css-value">1200px</span>;<br>
+                            &nbsp;&nbsp;<span class="code-css-property">margin</span>: <span class="code-css-value">0 auto</span>;<br>
+                            }<br><br>
+                            
+                            <span class="code-comment">/* Tablet styles */</span><br>
+                            @<span class="code-keyword">media</span> (<span class="code-css-property">min-width</span>: <span class="code-css-value">768px</span>) {<br>
+                            &nbsp;&nbsp;.container {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-css-property">display</span>: <span class="code-css-value">grid</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-css-property">grid-template-columns</span>: <span class="code-css-value">1fr 2fr</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-css-property">gap</span>: <span class="code-css-value">2rem</span>;<br>
+                            &nbsp;&nbsp;}<br>
+                            }<br><br>
+                            
+                            <span class="code-comment">/* Desktop styles */</span><br>
+                            @<span class="code-keyword">media</span> (<span class="code-css-property">min-width</span>: <span class="code-css-value">1024px</span>) {<br>
+                            &nbsp;&nbsp;.container {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-css-property">grid-template-columns</span>: <span class="code-css-value">1fr 3fr 1fr</span>;<br>
+                            &nbsp;&nbsp;}<br>
+                            }
+                        </div>
+                        
+                        <div class="exercise">
+                            <h4>Exercise: Create a Responsive Card Layout</h4>
+                            <p>Create a CSS layout that displays cards in a responsive grid:</p>
+                            <ul>
+                                <li>On mobile devices (under 768px), show 1 card per row</li>
+                                <li>On tablets (768px to 1023px), show 2 cards per row</li>
+                                <li>On desktop (1024px and above), show 3 cards per row</li>
+                            </ul>
+                            <p>Use either CSS Grid or Flexbox for the layout and media queries for the responsive behavior.</p>
+                            <div class="code-block">
+                                <span class="code-comment">/* Your CSS solution here */</span><br>
+                                .card-container {<br>
+                                &nbsp;&nbsp;<span class="code-comment">/* Add your styles */</span><br>
+                                }<br><br>
+                                
+                                .card {<br>
+                                &nbsp;&nbsp;<span class="code-comment">/* Add your styles */</span><br>
+                                }<br><br>
+                                
+                                <span class="code-comment">/* Add media queries for different screen sizes */</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Cards (Initial View) -->
+                <div class="blog-grid" id="blog-cards">
+                    <div class="blog-card" data-category="javascript" id="js-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="JavaScript Basics">
+                        </div>
+                        <div class="blog-content">
+                            <h3>JavaScript Fundamentals: A Beginner's Guide</h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-clock"></i> 15 min read</span>
+                                <span><i class="far fa-calendar"></i> June 12, 2023</span>
+                            </div>
+                            <p>Learn the core concepts of JavaScript including variables, data types, functions, and control structures. Perfect for those just starting their coding journey.</p>
+                            <a href="#" class="read-more" data-article="js">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card" data-category="html" id="html-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="HTML Structure">
+                        </div>
+                        <div class="blog-content">
+                            <h3>HTML5 Semantic Elements: Building Better Structure</h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-clock"></i> 10 min read</span>
+                                <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                            </div>
+                            <p>Discover how to use HTML5 semantic elements to create more meaningful, accessible, and SEO-friendly web pages.</p>
+                            <a href="#" class="read-more" data-article="html">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card" data-category="css" id="css-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="CSS Layouts">
+                        </div>
+                        <div class="blog-content">
+                            <h3>Modern CSS Layouts with Flexbox and Grid</h3>
+                            <div class="blog-meta">
+                                <span><i class="far fa-clock"></i> 20 min read</span>
+                                <span><i class="far fa-calendar"></i> May 15, 2023</span>
+                            </div>
+                            <p>Master the art of creating responsive layouts using CSS Flexbox and Grid. Learn when to use each and how they work together.</p>
+                            <a href="#" class="read-more" data-article="css">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				</div>
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind? Let's discuss how we can work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>ochuowo@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+254 712 345 678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3>Website</h3>
+                            <p>www.ochuowo.dev</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="bottom">
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ochuowo Otiato</h3>
+                    <p>Fullstack developer specializing in creating digital experiences that matter. Passionate about technology and its potential to transform lives.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Ochuowo" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/paul-ochuowo-08b93822/" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.gmail.com/" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ochuowo Otiato. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://github.com/Ochuowo" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://www.linkedin.com/in/paul-ochuowo-08b93822/" class="icon brands fa-linkedin"><span class="label">fa-linkedin</span></a></li>
-							<li><a href="https://www.gmail.com/" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
 
-				</div>
+        // Blog Tab Functionality
+        const blogTabs = document.querySelectorAll('.blog-tab');
+        const blogCards = document.querySelectorAll('.blog-card');
+        
+        blogTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                blogTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                const category = tab.getAttribute('data-category');
+                
+                // Show/hide blog cards based on category
+                blogCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
 
-			</div>
+        // Article Navigation
+        const readMoreLinks = document.querySelectorAll('.read-more');
+        const blogArticles = document.querySelectorAll('.blog-article');
+        const blogCardsContainer = document.getElementById('blog-cards');
+        const backToBlogLinks = document.querySelectorAll('.back-to-blog');
+        
+        readMoreLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const articleId = link.getAttribute('data-article') + '-article';
+                
+                // Hide blog cards
+                blogCardsContainer.style.display = 'none';
+                
+                // Show selected article
+                document.getElementById(articleId).classList.add('active');
+                
+                // Scroll to article
+                document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        backToBlogLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Hide all articles
+                blogArticles.forEach(article => {
+                    article.classList.remove('active');
+                });
+                
+                // Show blog cards
+                blogCardsContainer.style.display = 'grid';
+            });
+        });
 
-		<!-- Main -->
-			<div id="main">
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
 
-							<header>
-								<h2 class="alt">Hi!...I'm <strong>Ochuowo</strong>, a <a href="https://github.com/Ochuowo">full-stack</a> developer<br />
-								in software engineering, <a href="https://www.linkedin.com/in/paul-ochuowo-08b93822/">who lives by-the-code</a>.</h2>
-								<p>Mobile / Desktop / Web-Design <br />
-									For all your small, medium and Enterprise solutions.</p>
-							</header>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+            }
+        });
 
-							<footer>
-								<a href="#portfolio" class="button scrolly">Welcome</a>
-							</footer>
-
-						</div>
-					</section>
-
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Portfolio</h2>
-							</header>
-
-							<p>On offer is a wide range of products and services, which include but are not limited to workflow design, web-hosting, technical
-							   and maintenance support, data entry assistance, staff training, site visits and even e-commerce services, should there be a need.</p>
-
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="images/mobapp.png" class="image fit"><img src="images/mobapp.png" alt="" /></a>
-										<header>
-											<h3>Mobile Applications</h3>
-											<p>
-												Internet of Things or IOT is the new norm. Mobile apps will not only reside in our phones,
-												but are fastly being adapted into machine learning and A.I. production fields.
-												The next 50 years will reshape everything you know about technology and we are well aware of that.
-												It's why we create UX/UI features from scratch, helping to bring your ideas to life,
-												exactly the way you envision them to be. 
-											</p>
-										</header>
-									</article>
-									<article class="item">
-										<a href="images/ochisproperty.png" class="image fit"><img src="images/ochisproperty.png" alt="" /></a>
-										<header>
-											<h3>Ochi's Property Manager</h3>
-											<p>
-												A robust property management solution offering various benefits, in asset management, as well as tenants. 
-												Collect data from several resources but bring them all under one location, for convinience purposes as well 
-												as accurate record keeping. Scrutinize suppliers, leases and service providers on a daily basis.
-											    Click here to download <li><a href="https://github.com">Ochi's Property Manager</a></li>
-											</p>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="images/webdesign.jpg" class="image fit"><img src="images/webdesign.jpg" alt="" /></a>
-										<header>
-											<h3>Web-Design & Desktop Applications</h3>
-											<p>
-												Get a quick set up with web-hosting, web-design and web integration services.
-												From simple ideas to complicated and intricate concepts, we have everything you're looking for.
-											</p>
-										</header>
-									</article>
-									<article class="item">
-										<a href="images/ecommerce.png" class="image fit"><img src="images/ecommerce.png" alt="" /></a>
-										<header>
-											<h3>E-commerce</h3>
-											<p>
-												On-line shopping has never been easier. Take full advantage of the e-commerce platforms, by running your store virtually, hustle free.
-												Clients can now look for you on the internet, see your products or services, make an order, then pay for deliveries.
-												The demand for e-commerce services has spiked with the advent of the pandemic, so if you have a business that you want to
-												upgrade, you've come to the right place.
-											</p>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="images/sacco manager.png" class="image fit"><img src="images/sacco manager.png" alt="" /></a>
-										<header>
-											<h3>Bamboo Sacco Manager</h3>
-											<p>A user-friendly table banking local system that strictly operates off-line. Easy installation,
-												affordable rates and a big time-saver for data sharing, generation of reports, membership & board
-												management, loan & interest calculus, just to mention a few benefits.
-												Click here to download <li><a href="https://github.com">Bamboo Sacco Manager</a></li>
-											</p>
-										</header>
-									</article>
-									<article class="item">
-										<a href="images/jotec school manager.png" class="image fit"><img src="images/jotec school manager.png" alt="" /></a>
-										<header>
-											<h3>Jotec School Manager</h3>
-												<p>
-													A comprehensive school management system that encompasses student management, staff management and takes care of the day to day operations of a learning institution, 
-													so that overall performance is not only achieved within the best time possible, 
-													but the vision, mission and objectives of the institution can all be assessed thoroughly through a secure and user friendly platform.
-												    Click here to download <li><a href="https://github.com">JoTec School Manager</a></li>
-												</p>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<a href="images/developer.jpg" class="image featured"><img src="images/developer.jpg" alt="" /></a>
-
-							<p>Ever since the first day I discovered computers, I just wanted to get to know more about them and what they can do. 
-							   New technology always fascinates me beyond imagination, every chance I come accross new devices or new software, 
-							   a spark lights up inside (*), wanting to dig deeper and to find out a bit more about the latest break-throughs or the newest kid on the block with an amazing invention. 
-							   Between hardware and software, I chose software for one reason, the ability to touch and change lives accross the globe, 
-							   this is a calling I am more than willing to answer at any given time,any given place. 
-							   This is why I became a full stack developer, specializing in Java, sql, C#, vba, CSS and HTML. I create desktop, mobile and web applications, 
-							   supporting both the frontend and backend, as well as middleware for authentication, as and when is required. 
-							   </p>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Need a solution? send me an email with your contacts and I'll be in touch asap. 
-							   Thanks for your time and have a Siku Njema / good day / guten tag / bonjour!</p>
-
-							<form method="post" action="https://formspree.io/f/mgergadn">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="hidden" name="Submitted" value=True" />
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Waterland Enterprise. All rights reserved.</li><li>Designed For: <a href="https://www.linkedin.com/in/paul-ochuowo-08b93822/">Resource Management Systems.</a></li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/jquery.scrolly.min.js"></script>
-			<script src="js/jquery.scrollex.min.js"></script>
-			<script src="js/browser.min.js"></script>
-			<script src="js/breakpoints.min.js"></script>
-			<script src="js/util.js"></script>
-			<script src="js/main.js"></script>
-
-	</body>
+        // JavaScript Exercise Solution
+        function calculator(num1, num2, operator) {
+            switch(operator) {
+                case '+':
+                    return num1 + num2;
+                case '-':
+                    return num1 - num2;
+                case '*':
+                    return num1 * num2;
+                case '/':
+                    return num2 !== 0 ? num1 / num2 : 'Error: Division by zero';
+                default:
+                    return 'Error: Invalid operator';
+            }
+        }
+        
+        // Test the calculator function
+        console.log(calculator(10, 5, '+')); // 15
+        console.log(calculator(10, 5, '-')); // 5
+        console.log(calculator(10, 5, '*')); // 50
+        console.log(calculator(10, 5, '/')); // 2
+    </script>
+</body>
 </html>
