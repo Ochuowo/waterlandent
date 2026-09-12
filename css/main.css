@@ -625,6 +625,127 @@
   }
 
   /* ---------- Responsive ---------- */
+  /* ---------- Responsive ---------- */
+    /* On small screens the panels become slim icon rails. */
+  @media (max-width: 640px) {
+
+    :root {
+      --panel-w: 52px;      /* slim side rail */
+      --panel-h: 56px;      /* slim top / bottom bar */
+      --gap: 8px;
+    }
+
+    /* Hide the text label — icons only */
+    .nav-panel .nav-item .label { display: none; }
+
+    /* Tighten the item padding so only the icon shows */
+    .nav-panel .nav-item {
+      padding: 8px;
+      gap: 0;
+      border-radius: 12px;
+      background: transparent;
+      border-color: transparent;
+    }
+
+    .nav-panel .nav-item:hover,
+    .nav-panel .nav-item.active {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Top / bottom rails: row of icon buttons */
+    .nav-panel.top,
+    .nav-panel.bottom {
+      gap: 4px;
+      padding: 6px 10px;
+    }
+
+    .nav-panel.top .nav-item,
+    .nav-panel.bottom .nav-item {
+      padding: 8px 10px;
+      flex-direction: row;
+    }
+
+    /* Side rails: column of icon buttons */
+    .nav-panel.left,
+    .nav-panel.right {
+      gap: 4px;
+      padding: 6px 0;
+    }
+
+    .nav-panel.left .nav-item,
+    .nav-panel.right .nav-item {
+      padding: 8px 6px;
+      width: 100%;
+    }
+
+    /* Icons stay legible at the smaller size */
+    .nav-panel .icon { width: 22px; height: 22px; }
+    .nav-panel.left .icon,
+    .nav-panel.right .icon { width: 20px; height: 20px; }
+
+    /* --- Panel-specific active states --- */
+
+    /* Top: keep the gradient pill, but slimmer */
+    .nav-panel.top .nav-item.active {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    /* Bottom: keep the glowing underline */
+    .nav-panel.bottom .nav-item.active::after {
+      bottom: 2px;
+      width: 60%;
+    }
+
+    /* Sides: keep the accent bar */
+    .nav-panel.left  .nav-item.active,
+    .nav-panel.right .nav-item.active {
+      transform: none;
+    }
+
+    /* Shrink the moon decorations on small screens */
+    .nav-panel.top .moon-body,
+    .nav-panel.bottom .moon-body {
+      width: 54px;
+      height: 54px;
+    }
+
+    .nav-panel.right .moon-body,
+    .nav-panel.left .moon-body {
+      width: 44px;
+      height: 200px;
+    }
+
+    /* Slightly smaller contact form on mobile */
+    #contact-form {
+      gap: 14px;
+      max-width: 100%;
+    }
+  }
+
+  /* Extra-small screens: reduce everything a little more */
+  @media (max-width: 400px) {
+    :root {
+      --panel-w: 46px;
+      --panel-h: 52px;
+    }
+
+    .nav-panel .icon { width: 20px; height: 20px; }
+    .nav-panel.left .icon,
+    .nav-panel.right .icon { width: 18px; height: 18px; }
+
+    .nav-panel.top .moon-body,
+    .nav-panel.bottom .moon-body {
+      width: 46px;
+      height: 46px;
+    }
+
+    .nav-panel.right .moon-body,
+    .nav-panel.left .moon-body {
+      width: 38px;
+      height: 170px;
+    }
+  }
   @media (max-width: 480px) {
     .project-links { flex-direction: column; }
     .project-links a { width: 100%; }
