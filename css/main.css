@@ -716,7 +716,7 @@
     }
 
     .project-links { flex-direction: column; }
-    .project-links a { width: 100%; }
+    .project-links a { width: 75%; }
 
     /* Slightly smaller contact form on mobile */
     #contact-form {
@@ -750,7 +750,7 @@
   }
   @media (max-width: 480px) {
     .project-links { flex-direction: column; }
-    .project-links a { width: 100%; }
+    .project-links a { width: 75%; }
   }
 
     /* ---------- Image area ---------- */
