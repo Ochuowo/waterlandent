@@ -164,17 +164,81 @@
       <h2>Contact</h2>
       <p>Now that you're <strong>finally here</strong> Any thoughts?</p>
       <p>Drop me an email real quick, let me know what you have in mind.</p>
-      <form method="post" action="https://formspree.io/f/mgergadn">
-        <input type="text" placeholder="Your name" required />
-        <input type="email" placeholder="Email address" required />
-        <textarea rows="4" placeholder="Message"></textarea>
-        <button type="submit" id="cf-submit">
-        <span class="btn-label">Send message</span>
-        <span class="btn-spinner" aria-hidden="true"></span>
-        </button>
+       <form
+		    id="contact-form"
+		    action="https://formspree.io/f/mgergadn"
+		    method="POST"
+		    novalidate
+		  >
+		    <!-- Honeypot field — hidden from real users, catches bots -->
+		    <input
+		      type="text"
+		      name="_gotcha"
+		      tabindex="-1"
+		      autocomplete="off"
+		      style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
+		      aria-hidden="true"
+		    />
+		
+		    <div class="form-row">
+		      <label for="cf-name">Your name</label>
+		      <input
+		        id="cf-name"
+		        name="name"
+		        type="text"
+		        placeholder="Jane Doe"
+		        autocomplete="name"
+		        required
+		      />
+		    </div>
 
-        <p id="cf-status" class="form-status" role="status" aria-live="polite"></p>
-      </form>
+		    <div class="form-row">
+		      <label for="cf-email">Your email</label>
+		      <input
+		        id="cf-email"
+		        name="email"
+		        type="email"
+		        placeholder="jane@example.com"
+		        autocomplete="email"
+		        required
+		      />
+		    </div>
+		
+		    <div class="form-row">
+		      <label for="cf-subject">Subject</label>
+		      <input
+		        id="cf-subject"
+		        name="subject"
+		        type="text"
+		        placeholder="Let's build something"
+		        required
+		      />
+		    </div>
+		
+		    <div class="form-row">
+		      <label for="cf-message">Message</label>
+		      <textarea
+		        id="cf-message"
+		        name="message"
+		        rows="5"
+		        placeholder="Tell me about your project…"
+		        required
+		      ></textarea>
+		    </div>
+
+		    <button type="submit" id="cf-submit">
+		      <span class="btn-label">Send message</span>
+		      <span class="btn-spinner" aria-hidden="true"></span>
+		    </button>
+		
+		    <!-- Flash notification sits directly below the button -->
+		    <div
+		      id="cf-flash"
+		      class="form-flash"
+		      role="status"
+		      aria-live="polite"
+		    ></div>
+  	</form>
       <p style="margin-top:18px">Click <strong>Home</strong> — the line will run across the bottom edge and climb back up the right side, completing the lunar loop.</p>
     </section>
 
