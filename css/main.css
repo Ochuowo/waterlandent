@@ -625,7 +625,6 @@
   }
 
   /* ---------- Responsive ---------- */
-  /* ---------- Responsive ---------- */
     /* On small screens the panels become slim icon rails. */
   @media (max-width: 640px) {
 
@@ -715,6 +714,9 @@
       width: 44px;
       height: 200px;
     }
+
+    .project-links { flex-direction: column; }
+    .project-links a { width: 100%; }
 
     /* Slightly smaller contact form on mobile */
     #contact-form {
@@ -882,28 +884,6 @@
   .traveler[data-trail="4"].on { opacity: 0.3; }
   .traveler[data-trail="5"] { width: 4px;  height: 4px; }
   .traveler[data-trail="5"].on { opacity: 0.18; }
-
-  /* ============================================================
-     RESPONSIVE
-     ============================================================ */
-  @media (max-width: 640px) {
-    :root {
-      --panel-w: 78px;
-      --panel-h: 96px;
-      --gap: 14px;
-    }
-    .nav-panel.left .nav-item,
-    .nav-panel.right .nav-item { font-size: 0.6rem; padding: 8px 4px; }
-    .icon { width: 22px; height: 22px; }
-    .nav-panel.left .icon,
-    .nav-panel.right .icon { width: 20px; height: 20px; }
-
-    .nav-panel.top .moon-body,
-    .nav-panel.bottom .moon-body { width: 76px; height: 76px; }
-
-    .nav-panel.right .moon-body,
-    .nav-panel.left .moon-body { width: 64px; height: 260px; }
-  }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
