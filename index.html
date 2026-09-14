@@ -245,6 +245,91 @@
   </main>
 
   <script>
+  
+  const form      = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('cf-submit');
+  const flash     = document.getElementById('cf-flash');
+  const btnLabel  = submitBtn.querySelector('.btn-label');
+
+  let isSending = false;
+
+  /* ---------- Flash notification ---------- */
+  function showFlash(message, type /* 'success' | 'error' | 'info' */) {
+    flash.textContent = message;
+    flash.classList.remove('success', 'error', 'info');
+    flash.classList.add('show', type);
+  }
+
+  function hideFlash() {
+    flash.classList.remove('show', 'success', 'error', 'info');
+    // clear text after the collapse animation finishes
+    setTimeout(() => {
+      if (!flash.classList.contains('show')) flash.textContent = '';
+    }, 320);
+  }
+
+  /* ---------- Button state ---------- */
+  function setLoading(state) {
+    isSending = state;
+    submitBtn.disabled = state;
+    submitBtn.classList.toggle('loading', state);
+    btnLabel.textContent = state ? 'Sending…' : 'Send message';
+  }
+
+  /* ---------- Submit handler ---------- */
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    if (isSending) return;
+
+    // Basic validation before we hit the network
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      showFlash('Please fill in every field with a valid value.', 'error');
+      return;
+    }
+
+    // Clear any previous flash so the new one animates in cleanly
+    hideFlash();
+
+    // Small delay so the collapse of the old flash is visible
+    await new Promise(r => setTimeout(r, 200));
+
+    setLoading(true);
+    showFlash('Sending your message…', 'info');
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,             // POST
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        showFlash('Message sent — thanks! I\'ll reply soon.', 'success');
+        form.reset();
+      } else {
+        // Formspree returns a JSON body describing what went wrong
+        let detail = 'Something went wrong. Please try again.';
+        try {
+          const data = await response.json();
+          if (data && Array.isArray(data.errors) && data.errors.length) {
+            detail = data.errors.map(e => e.message).join(' ');
+          }
+        } catch (_) { /* not JSON — keep the generic message */ }
+        showFlash(detail, 'error');
+      }
+    } catch (err) {
+      console.error('Formspree error:', err);
+      showFlash(
+        'Network error — check your connection and try again.',
+        'error'
+      );
+    } finally {
+      setLoading(false);
+    }
+  });
+	  
     /* ============================================================
        SETUP
        ============================================================ */
