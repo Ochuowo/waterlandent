@@ -824,12 +824,12 @@
     }
 
     .project-links { flex-direction: column; }
-    .project-links a { width: 90%; }
+    .project-links a, .form-input, .form-textarea { width: 90%; }
 
     /* Slightly smaller contact form on mobile */
     #contact-form {
       gap: 14px;
-      max-width: 90%;
+      max-width: 100%;
     }
   }
 
