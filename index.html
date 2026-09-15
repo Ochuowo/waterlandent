@@ -164,169 +164,100 @@
       <h2>Contact</h2>
       <p>Now that you're <strong>finally here</strong> Any thoughts?</p>
       <p>Drop me an email real quick, let me know what you have in mind.</p>
-       <form
-		    id="contact-form"
-		    action="https://formspree.io/f/mgergadn"
-		    method="POST"
-		    novalidate
-		  >
-		    <!-- Honeypot field — hidden from real users, catches bots -->
-		    <input
-		      type="text"
-		      name="_gotcha"
-		      tabindex="-1"
-		      autocomplete="off"
-		      style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
-		      aria-hidden="true"
-		    />
-		
-		    <div class="form-row">
-		      <label for="cf-name">Your name</label>
-		      <input
-		        id="cf-name"
-		        name="name"
-		        type="text"
-		        placeholder="Jane Doe"
-		        autocomplete="name"
-		        required
-		      />
-		    </div>
-
-		    <div class="form-row">
-		      <label for="cf-email">Your email</label>
-		      <input
-		        id="cf-email"
-		        name="email"
-		        type="email"
-		        placeholder="jane@example.com"
-		        autocomplete="email"
-		        required
-		      />
-		    </div>
-		
-		    <div class="form-row">
-		      <label for="cf-subject">Subject</label>
-		      <input
-		        id="cf-subject"
-		        name="subject"
-		        type="text"
-		        placeholder="Let's build something"
-		        required
-		      />
-		    </div>
-		
-		    <div class="form-row">
-		      <label for="cf-message">Message</label>
-		      <textarea
-		        id="cf-message"
-		        name="message"
-		        rows="5"
-		        placeholder="Tell me about your project…"
-		        required
-		      ></textarea>
-		    </div>
-
-		    <button type="submit" id="cf-submit">
-		      <span class="btn-label">Send message</span>
-		      <span class="btn-spinner" aria-hidden="true"></span>
-		    </button>
-		
-		    <!-- Flash notification sits directly below the button -->
-		    <div
-		      id="cf-flash"
-		      class="form-flash"
-		      role="status"
-		      aria-live="polite"
-		    ></div>
-  	</form>
-      <p style="margin-top:18px">Click <strong>Home</strong> — the line will run across the bottom edge and climb back up the right side, completing the lunar loop.</p>
+		<form id="contact-form" novalidate>
+	        <div class="form-row">
+	        <label for="cf-name">Your name</label>
+	        <input id="cf-name" name="from_name" type="text" placeholder="Jane Doe" required />
+	        </div>
+	
+	        <div class="form-row">
+	        <label for="cf-email">Your email</label>
+	        <input id="cf-email" name="reply_to" type="email" placeholder="jane@example.com" required />
+	        </div>
+	
+	        <div class="form-row">
+	        <label for="cf-subject">Subject</label>
+	        <input id="cf-subject" name="subject" type="text" placeholder="Let's build something" required />
+	        </div>
+	
+	        <div class="form-row">
+	        <label for="cf-message">Message</label>
+	        <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+	        </div>
+	
+	        <button type="submit" id="cf-submit">
+	        <span class="btn-label">Send message</span>
+	        <span class="btn-spinner" aria-hidden="true"></span>
+	        </button>
+	
+	        <p id="cf-status" class="form-status" role="status" aria-live="polite"></p>
+		</form>
+             <p style="margin-top:18px">Click <strong>Home</strong> — the line will run across the bottom edge and climb back up the right side, completing the lunar loop.</p>
     </section>
 
   </main>
 
-  <script>
-  
-  const form      = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('cf-submit');
-  const flash     = document.getElementById('cf-flash');
-  const btnLabel  = submitBtn.querySelector('.btn-label');
+  <script>	
+	/* ============================================================
+   EMAIL SERVICE
+   ============================================================ */
+	  
+	  const EMAILJS_SERVICE_ID  = "service_2lxyz9c";   // e.g. "service_abc1234"
+	  const EMAILJS_TEMPLATE_ID = "template_hbsmwzo";  // e.g. "template_xyz9876"
+	
+	  const form      = document.getElementById('contact-form');
+	  const submitBtn = document.getElementById('cf-submit');
+	  const statusEl  = document.getElementById('cf-status');
 
-  let isSending = false;
-
-  /* ---------- Flash notification ---------- */
-  function showFlash(message, type /* 'success' | 'error' | 'info' */) {
-    flash.textContent = message;
-    flash.classList.remove('success', 'error', 'info');
-    flash.classList.add('show', type);
+  function setStatus(message, type) {
+    statusEl.textContent = message;
+    statusEl.classList.remove('success', 'error');
+    statusEl.classList.add('show', type);
   }
 
-  function hideFlash() {
-    flash.classList.remove('show', 'success', 'error', 'info');
-    // clear text after the collapse animation finishes
-    setTimeout(() => {
-      if (!flash.classList.contains('show')) flash.textContent = '';
-    }, 320);
+  function clearStatus() {
+    statusEl.textContent = '';
+    statusEl.classList.remove('show', 'success', 'error');
   }
 
-  /* ---------- Button state ---------- */
-  function setLoading(state) {
-    isSending = state;
-    submitBtn.disabled = state;
-    submitBtn.classList.toggle('loading', state);
-    btnLabel.textContent = state ? 'Sending…' : 'Send message';
-  }
-
-  /* ---------- Submit handler ---------- */
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
+    clearStatus();
 
-    if (isSending) return;
-
-    // Basic validation before we hit the network
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      showFlash('Please fill in every field with a valid value.', 'error');
+    // Guard: don't submit if the SDK or IDs aren't configured yet
+    if (EMAILJS_SERVICE_ID.startsWith('YOUR_') ||
+        EMAILJS_TEMPLATE_ID.startsWith('YOUR_')) {
+      setStatus('Email service is not configured yet — see the setup notes in the code.', 'error');
       return;
     }
 
-    // Clear any previous flash so the new one animates in cleanly
-    hideFlash();
+    // Native HTML5 validation
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setStatus('Please fill in every field with a valid value.', 'error');
+      return;
+    }
 
-    // Small delay so the collapse of the old flash is visible
-    await new Promise(r => setTimeout(r, 200));
-
-    setLoading(true);
-    showFlash('Sending your message…', 'info');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
 
     try {
-      const response = await fetch(form.action, {
-        method: form.method,             // POST
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
+      // form is passed as the template parameters — EmailJS matches
+      // each input's `name` attribute to the {{variable}} in the template.
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
 
-      if (response.ok) {
-        showFlash('Message sent — thanks! I\'ll reply soon.', 'success');
-        form.reset();
-      } else {
-        // Formspree returns a JSON body describing what went wrong
-        let detail = 'Something went wrong. Please try again.';
-        try {
-          const data = await response.json();
-          if (data && Array.isArray(data.errors) && data.errors.length) {
-            detail = data.errors.map(e => e.message).join(' ');
-          }
-        } catch (_) { /* not JSON — keep the generic message */ }
-        showFlash(detail, 'error');
-      }
-    } catch (err) {
-      console.error('Formspree error:', err);
-      showFlash(
-        'Network error — check your connection and try again.',
-        'error'
-      );
+      setStatus('Message sent — thanks! I\'ll reply soon.', 'success');
+      form.reset();
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      const detail =
+        error && error.text ? error.text :
+        error && error.message ? error.message :
+        'Unknown error';
+      setStatus('Could not send the message. ' + detail, 'error');
     } finally {
-      setLoading(false);
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
     }
   });
 	  
