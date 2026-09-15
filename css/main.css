@@ -824,7 +824,7 @@
     }
 
     .project-links { flex-direction: column; }
-    .project-links a { width: 90%; }
+    .project-links a, form input { width: 90%; }
 
     /* Slightly smaller contact form on mobile */
     #contact-form {
